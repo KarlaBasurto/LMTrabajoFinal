@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="Gastronomía ecuatoriana" content="Regiones, Newsletter">
+    <title>INICIO</title>
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/40/PNG/128/FlagofEcuador_6543.png">
+</head>
+<body>
+	<!--Creamos el encabezado de la página con <header> y dentro de este creamos un menú de navegación con el elemento <nav> que contiene una lista con el incio 
+		y las otras tres páginas, las que son a su vez cada una el enlace a su documento html que se encuentra en nuestra carpeta,
+		además yo he querido que el icono con la bandera tambien esté en el menú a modo de "logo" así que lo he introducido mediante un enlace
+		y con <div> agrupamos el contenido y le damos el id="icono" para usarlo en css (esto será utlizado a lo largo de todo el código)
+	-->
+	<header>
+		<div id="icono">
+			<a href="#"> <img src="https://cdn.icon-icons.com/icons2/40/PNG/128/FlagofEcuador_6543.png" class="icono" alt="Icono bandera Ecuador">
+			</a>
+		</div> 
+	   <nav>
+          <ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href= "../Costa/Costa.html">Costa e Islas</a></li>
+			<li><a href="../Sierra/Sierra.html">Sierra</a></li>
+			<li><a href="../Oriente/Oriente.html">Oriente</a></li>
+		  </ul>
+       </nav>	
+	</header>
+<h1>
+	<div id="titulo">
+		GASTRONOMIA ECUATORIANA
+	</div>
+</h1>
+
+<h2>
+	<div id="subtitulo">
+		¡Un mundo de sabores!
+	</div>
+</h2>	
+
+<!--Con <div> he agrupado todo el contenido en la clase texto y despues he creado dos divisiones: una que contiene una pequeña introducción 
+	y un GIF de las islas galápagos mediante la etiqueta de insercion de imagenes <img> (con en el enlace , la especificacion de su tamaño 
+	y despcrición por si no se pudiera visualizar)
+	;y otra división que contiene el formulario .
+-->
+
+<div class="texto">
+	<div>
+		<h3>
+			La gastronomía ecuatoriana se ha visto enriquecida por la pluriculturalidad, la diversidad de climas así como la variedad de especias y productos que existen en el país. Además, la herencia tanto indígena como europea ha cimentado un sincretismo que se centra en la sazón y creatividad constantemente renovada a través de las nuevas generaciones de cocineros y comensales. A esta combinación tan singular se la ha definido como Comida Criolla.<br> 
+			<img src="https://realestatemarket.com.mx/images/2020/08_Agosto/2008/recibe_ecuador_sello_de_viaje_seguro_del_wttc%20.gif" width="1100" height="500" alt="paisaje en movimiento" >
+			<p>En este portal se muestran los platos más representativos de cada región con su respectiva forma de preparación.Espero sea de mucha ayuda para futuras consultas y que disfruten de la enorme variedad culinaria que Ecuador ofrece.</p>
+			<p>A contiuación vamos a conocer un poco de cada region para comprender toda la diversidad que se va a reflejar en sus platos.</p>
+		</h3>
+		<h2>Diversidad Geográfica y gastronómica</h2>
+		<h3>
+			La presencia de la cordillera de los Andes dio origen a la separación del país en tres regiones continentales, en cada una de ellas existe características en la topografía y en el clima que las diferencia una de la otra, a estos tres conjuntos continentales se suman las islas Galápagos que conforma una cuarta región, por lo que los productos y consecuentemente los platos tìpicos de cada región van a variar mucho dandole a Ecuador una riqueza culinaria envidiable.
+			<!--Utilicé una lista de desccripciones (dl para el enunciado de la lista, dt para el termino definido ->cada region, 
+				dd la definicion del termino->una resumen de la localizacion de la región) y las agrupe cada uno en un div todos con
+				la clase "term" para poder cambiar el aspecto y que se aplique a todos los "bloques", 
+				usé un id distinto para cambiar el fondo de cada uno de ellos.
+			-->
+			<dl class="regiones"> <h2>Regiones Geográficas: </h2>
+				<div class="term" id="costa">
+					<dt>
+						<span><em>Costa</em></span>
+					</dt>
+					<dd>Se encuentra situada entre la cordillera de los Andes y el océano Pacífico. Su paisaje mayormente llano varía entre los matorrales y bosques secos del sur y los bosques húmedos del norte, con presencia de manglares en el Golfo de Guayaquil y en la costa norte. </dd>
+				</div>
+				
+				<div class="term" id="sierra">
+					<dt>
+						<span><em>Sierra</em></span>
+					</dt>
+					<dd>Se extiende de norte a sur por los Andes, su altura suele desde los 1800 m o menor, hasta los 6268 m con el Chimborazo, se caracteriza por sus impresionantes elevaciones montañosas, volcanes y nevados.En esta región coexisten zonas calientes, templadas y frías. Su región interandina presenta valles de diferentes altitudes y climas.  </dd>
+				</div>
+				<div class="term" id="oriente">
+					<dt>
+						<span><em>Oriente</em></span>
+					</dt>
+					<dd>Se encuentra conformada por un area de aproximadamente 120000 km<sup>2</sup> del Amazonas, se extiende sobre un área de exuberante vegetación, propia de los bosques húmedo-tropicales que contienen los hábitat vegetales y animales más ricos y complejos del mundo</dd>
+				</div>
+				<div class="term" id="islas">
+					<dt>
+						<span><em>Islas Galápagos</em></span> 
+					</dt>
+					<dd>Constituyen un archipiélago del océano Pacífico ubicado a 972 km de la costa de Ecuador,son la segunda reserva marina más grande del planeta y son conocidas por sus numerosas especies endémicas y por los estudios de Charles Darwin que le llevaron a establecer su teoría de la evolución por la selección natural. </dd>
+				</div>
+			</dl>
+		</h3>
+	</div>
+<!--Utilicé tres elementos de formularios difrentes: el primero <form> para que el usuario introduzca sus datos <input>, 
+	con action(de modo solo ilustrativo)puse envio.es para definir el servidor web que va a procesar el formulario,
+	method="GET" para que los datos se envien como anexo a la URL, y un <input type="submit"> para que verifique
+	y envie los datos el sitio indicado en action;el segundo <select> para que el usuario elija solo una opción 
+	de la lista del contenido que puede proporcionar la web ; y por último un botón el cual no tiene utilidad definida
+	pues habría que programarlo pero nos da estructura al formulario.
+-->
+
+	<div class="Newsletter" id="formulario">
+		<p>	
+			<h2>Recibe nuestras novedades</h2><br>
+		</p>
+		<h3>
+ 			Si desea suscribirse a nuestra Newsletter por favor rellene el siguiente formulario: <br>
+				<form action="envio.es" method="GET">
+					<input type="text" name="Nombre" placeholder="Nombre y Apellidos" required/>
+					<input type="text" name="Direccion" placeholder="E-mail" required/>
+					<input type="number" name="Numero" placeholder="Número de teléfono"  maxlength="9" required/>
+					<input type="submit" value="Suscribirse">
+				</form>
+			<p> Contenido en especifico que se quiere recibir:
+				<select name="Suscripcion">
+	 				<option value="Recetas">Recetas </option>
+	 				<option value="Vegetariano">Opciones vegetarianas</option>
+	 				<option value="Planear">Planea tu viaje a Ecuador</option>
+	 				<option value="Tour">Tour gastronomico Ecuatoriano</option>
+	 			</select>
+			</p>
+			<p>
+				<button name="button">Enviar</button><br>
+			</p>
+		</h3>
+	</div>
+
+</div>
+<!--Dado que era un requisito que nuestro nombre este en todas las páginas utilicé el footer para esto
+	haciendo uso tambien del comando para el icono de copyright para html &copy.
+-->
+<footer> &copy; Página creada por Karla Basurto Cañarte 2023 </footer>
+</body>
+</html>

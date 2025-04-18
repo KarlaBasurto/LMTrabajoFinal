@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Lemon';
+    src: url('../css/fonts/Lemon/Lemon-Regular.ttf');
+}
+@font-face{
+    font-family: 'Cabin';
+    src: url('../css/fonts/Cabin/Cabin-Italic-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../css/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+  font-family: 'Abril';
+  src: url('../css/fonts/Abril_Fatface/AbrilFatface-Regular.ttf');
+}
+body{
+    background-color:#edf6f9;
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+}
+
+header{
+    display: flex;
+    justify-content:space-evenly;
+    padding:20px;
+    background-image:linear-gradient(to bottom, #edf6f9,#83c5be ) ;
+    margin-left: 1px;
+    margin-right: 100px;
+    width: 1318px;
+    height: 55px;
+    position:fixed !important;
+    top:0; 
+    }
+    #icono {
+        margin-top: -25px;
+        margin-left: -1208px;
+        margin-right: 50px;
+        align-items: flex-start;
+        position:fixed !important;
+    }
+    nav ul{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        list-style: none;
+        overflow: hidden;
+       
+    }
+    nav ul li{
+        padding-right:30px;
+        margin-top: 10px;
+        
+   
+    }
+    nav ul li a{
+        font-family:'Lemon', sans-serif;
+        float:left;
+        font-size:x-large;
+        font-weight:700;
+        display:block;
+        padding:10px;
+        color:#006d77;
+        text-align: right;
+        margin-left: 100px;
+        margin-top: -25px;
+        }
+       
+    nav ul li:hover{
+        background: rgb(246, 243, 201); 
+        background-size: 200px;
+    }
+  
+    #titulo{
+        font-family: 'Cabin', sans-serif;
+        font-size: 30px;
+        padding:1em;
+        color: #bff3e1;
+        text-shadow:0 0 8px #83c5b8, 0 0 5px #006d77;
+        font-weight: bolder;
+        text-align: center;
+        background-image: url(https://latintrails.com/wp-content/uploads/2021/12/Quilotoa.jpg);
+        background-size:contain;
+    }
+    #subtitulo {
+        font-family:'Pacifico', sans-serif;
+        font-size: 38px;
+        color:  rgb(3, 45, 79);
+        text-shadow:0 0 8px #a9fff6, 0 0 5px #08d4e7;
+      }
+
+summary{
+    font-family: 'Pacifico';
+    color: rgb(3, 69, 94);
+    font-size: 27px;
+}
+.div{
+    display:flex;
+    gap: 100px;
+}
+ 
+h2{
+    font-family: 'Abril', sans-serif;
+}    
+        

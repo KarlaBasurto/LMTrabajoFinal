@@ -1,0 +1,253 @@
+
+/*
+Cargamos la tipografía y le asignamos un alias Lemon,cabin.. a cada fuente almacenada en nuestra carpeta 
+para poder acceder a ellas cuando sea necesario.
+*/
+@font-face {
+    font-family: 'Lemon';
+    src: url('../css/fonts/Lemon/Lemon-Regular.ttf');
+}
+@font-face{
+    font-family: 'Cabin';
+    src: url('../css/fonts/Cabin/Cabin-Italic-VariableFont_wdth\,wght.ttf');
+}
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../css/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+@font-face {
+  font-family: 'Abril';
+  src: url('../css/fonts/Abril_Fatface/AbrilFatface-Regular.ttf');
+}
+/*
+Definimos el color del fondo y los márgenes para que nuestro todo el contenido este maquetado
+(el formularío tendrá uno aspecto específico como veremos más adelante que no respetará estos margenes)
+*/
+body{
+    background-color:#e2f0f5;
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+}
+
+/*
+Damos un estilo definido a todo el encabezado, este tiene (en orden):  el contenido (las listas y el icono)posicionado uno al aldo de otro con display:flex
+ y abrá un espacio entre cada uno de ellos con un margen interior de 20px, el fondo con un degradado y margenes a los lados;
+ un tamaño especifico de 80%x8.3%, y una posicion fija marcada como importante para que al recorrer la página siempre esté accesible arriba el menú de navegación.
+*/
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background-image:linear-gradient(to bottom, #edf6f9,#83c5be ) ;
+    margin-left: 105px;
+    margin-right: 40px;
+    width: 80%;
+    height:8% ;
+    position:fixed !important;
+    top:0; 
+}
+    #icono {
+        margin-top: -38px;
+        margin-left: -126px;
+        margin-right: 50px;
+        align-items: flex-start;
+        position:fixed !important;
+    }
+  /*
+    Ponemos estilo a la lista del menú de navegacion con las siguientes pseudoclases(en orden):
+    - a toda la lista le adjudicamos la posición una al lado de otra y eliminamos punto 
+       que se pone de manera "default" en una lista y que oculte el contenido que desbordda al contenedor.
+    - a cada elemento de la lista le damos un margen interior derecho y un margen exterior en la parte de arriba.
+    - a cada enlace le adjudicamos: la letra que habíamos cargado al principio usando su alias y una fuente alternativa
+      por si no llegase a cargar un tamaño y grosor deaseado a este texto, "empujamos" el elemento hacia el lado izquierdo 
+      de su contendedor y los mostramos en "cajas o bloques" con  un margen interior y margenes exteriores y un color determinados.
+    -Le ponemos un color de fondo al pasar el ratón por encima de los enlaces.
+  */
+
+   nav ul{
+        display: flex;
+        list-style: none;
+        overflow: hidden;
+  }
+  nav ul li{
+        padding-right:30px;
+        margin-top: 10px;
+  }
+    nav ul li a{
+        font-family:'Lemon', sans-serif;
+        float:left;
+        font-size:x-large;
+        font-weight:700;
+        text-align: center;
+        display:block;
+        padding:10px;
+        color:#006d77;
+        margin-left: 100px;
+        margin-top: -25px;
+        }
+       
+    nav ul li:hover{
+        background:#d2e5ff ;
+    }
+
+    /*
+    Definimos un estilo de letra para el título  con un color y una sombra determinada para que resalte del fondo
+    ,el cual es una imagen de un tamaño especifico, además la letra tendrá un tamaño que hemos elegido , en negrita
+    con un margen interior y el texto alineado en el centro. (el subtitulo será similar)
+    */
+#titulo{
+        font-family: 'Cabin', sans-serif;
+        font-size: 60px;
+        color: #d2e5ff;
+        text-shadow:0 0 8px #83c5be, 0 0 5px #006d77;
+        font-weight: bolder;
+        text-align: center;
+        background-image: url(https://www.expreso.info/files/2023-07/Ecuador_gastro.jpg);
+        background-size:300px;
+        padding:1em;
+}
+
+  #subtitulo {
+      font-family:'Pacifico', sans-serif;
+      font-size: 50px;
+      color: hwb(185 0% 54%);
+      text-shadow:0 0 8px #a9fff6, 0 0 5px #08d4e7;
+}
+/*
+Utilizamos la clase del elemento div ->texto para definirle un tamaño de 1100x600px y definimos que se muestre 
+una barra para hacer "scroll" cuando el contenido se desborda de los extremos superior e inferior del elemento en bloque.
+le añadimos un margen interior y un color de fondo.
+*/
+.texto {
+    width: 1100px;
+    height: 600px;
+    overflow: scroll;
+    padding-left:-150px;
+    background-color:#edf6f9;
+}
+/*
+Utilizamos la clase de la lista de definiciones dl->regiones para que el contenido se muestre com un cuadro de elemento de bloque
+ que establece un nuevo contexto de formato de bloque y con flex-wrap:wrap Los elementos flex son colocados en varias líneas uno
+ debajo de otro, le damos los margenes y tamaño necesarios para nuetra estructura.
+*/
+.regiones {
+        display:flow-root;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 40px auto;
+        margin-left: 200px;
+        width:1000px;
+}
+      
+ /*
+Indicamos todos los estilos que deben tener todos los hijos de clase term del padre regiones , es decir a cada elemento de la lista
+de definiciones que ahora son un "bloque o caja" , estas cajas tendrán su texto ( alineado en el centro de color negro y con una sombra
+para que sean distinguibles del fondo) un margen interno, margen externo sobre la parte de abajo, tamaño, borde y sombra determinados.
+*/
+
+.regiones>.term {
+        text-align:center;
+        color: black;
+        text-shadow: 1px 1px 2px #006d77, 0 0 2px #006d77, 0 0 2px #006d77;
+        width: 450px;
+        height: 400px;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 
+          0 3px 0    rgba(0,0,0,0.05),
+          0 5px 20px rgba(0,0,0,0.1);
+}
+/*
+Con el id identificativo a cada una de las definiciones de la clase term añadimos su respectiva imagen de fondo 
+y que lo muestre cubriendo toda la "caja".
+*/
+
+#costa {
+        background-image: url(https://previews.123rf.com/images/danflcreativo/danflcreativo1702/danflcreativo170200411/73676566-vista-a%C3%A9rea-escena-del-paisaje-de-puerto-l%C3%B3pez-una-peque%C3%B1a-playa-tur%C3%ADstica-ubicada-en-la-costa.jpg);
+        background-size:cover;
+}
+      
+#sierra {
+        background-image: url(https://media.istockphoto.com/id/480698816/es/foto/chimborazo-volc%C3%A1n-y-de-cordero.jpg?s=612x612&w=0&k=20&c=4lQfBm7Nfhi93pfMGifGmmgWwMsOxsKhAqHitz4i9Is=);
+        background-size:980px;
+}
+#oriente {
+        background-image: url(https://cips93oriente.files.wordpress.com/2012/06/oriente-2.jpg);
+        background-size:cover;
+}
+#islas {
+        background-image: url(https://www.shutterstock.com/image-photo/galapagos-islands-tortoise-big-turtle-600nw-2316709979.jpg);
+        background-size:cover;
+}
+
+/*
+Definimos un margen sobre la parte de abajo de las definiciones y el espaciado entre letras.
+*/
+.regiones >.term>dt {
+        margin-bottom: 1rem; 
+          line-height: 1;
+      
+}
+
+/*
+con la clase Newsletter del elemento div le damos un tamaño a todo el formulario , un color de la letra negro y un color de fondo 
+especifico además tendra una imagen obtenida desde un enlace con un tamaño y posicion adecuado para que se superponga lo menos posible
+con el texto , le ponemos un borde con un estilo y color que hemos elegido.
+*/
+
+.Newsletter {
+        height: 420px;
+        background: #d2e5ff;
+        color:lightblue; 
+        text-shadow: 1px 1px 2px #020707, 0 0 2px #022428, 0 0 3px #006d77;
+        background-image: url(https://thumbs.dreamstime.com/b/ecuador-hand-drawn-cartoon-doodles-illustration-funny-design-travel-creative-art-vector-background-handwritten-text-elements-180124653.jpg);
+        background-size:220px;
+        background-position:bottom;
+        background-position-y: 225px;
+        background-position-x: 125px;
+        background-repeat: no-repeat;
+        border-style:dotted
+        border-color: #006d77;
+}
+
+/*
+Al título de nuestro formulario le damos un estilo: un color aguamarina, que esté alineado en el centro
+y con la fuente Abril con un sombreado para que se distinga del fodo, un margen interno derecho 
+y un margen externo arriba
+*/
+
+.Newsletter h2{
+        color:hwb(185 2% 47%);
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+        padding-right: 9px;
+        margin-top: 105px;
+        font-family: 'Abril';
+}
+/*
+Definimos el formato del formulario, describimos que se posicione al lado del div con clase texto y que alineé 
+el contenido arriba del todo (para poder visualizar la imagen del fondo)
+con la posicion absolute conseguimos que no se mueva el formulario al movernos por el navegador en una posicion
+determinada por lostamaños de su alrededor (arriba abajo derecha e izquierda)
+*/
+#formulario{
+        display: flex;
+        align-items:top;
+        position:absolute;
+        bottom: 500px;
+        top: 340px;
+        left: 1180px;  
+        right: 2px;
+}
+/*
+Definimos que nuestro pie de página no se mueva y este abajo del todo del navegador.
+*/
+footer{
+        position: fixed;
+        bottom: 0;
+
+}
+

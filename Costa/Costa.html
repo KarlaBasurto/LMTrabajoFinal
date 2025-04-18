@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<!--
+	El contenido del encabezado es el mismo que en el inicio y se repite para todas las paginas
+	el contenido del body es tambien muy parecido entre las paginas de las regiones así que solo 
+	comentaré las cosas "nuevas" de cada página, lo mismo para css.
+-->
+<head>
+    <meta charset="UTF-8">
+	<meta name="Gastronomía costeña" content="Platos tipicos, Recetas con video, Tabla variedades platanos, ">
+	<title>COSTA</title>
+	<link rel="stylesheet" href="../css/stylescosta.css">
+	<link rel="shortcut icon" href="../css/icons/icons8-tortuga-100.png">    
+
+</head>
+<body>
+    <header>
+	<div id="iconotortuga">
+			<a href="#"><img class="icono" src="../css/icons/icons8-tortuga-100.png"  alt="icono tortuga">
+			</a>
+	</div>
+    <nav>
+    <ul>
+		<li><a href="../Inicio/index.html">Inicio</a></li>
+		<li><a href="Costa.html">Costa e Islas</a></li>
+		<li><a href="../Sierra/Sierra.html">Sierra</a></l>
+		<li><a href="../Oriente/Oriente.html">Oriente</a></li>
+	 </ul>
+    </nav>
+</header>
+<div id="titulo">
+<h1>Platos típicos de la Costa Ecuatoriana</h1>
+</div>
+
+<h2>
+	<div id="subtitulo">
+		Delicias Marítimas del Litoral Ecuatoriano
+	</div>
+</h2>
+<h3>
+	<p>Pocos países latinoamericanos incorporan el plátano en sus menús como lo hace Ecuador, gracias a todas sus variedades y versatilidad se encuentra en la mayoría de platos costeños.</p> 
+	<!--Icorporamos una tabla con el elemento <table>, con <caption> le damos una leyenda o titulo a la tabla,
+		creamos una cabecera <thead> con los titulos de cada columna y un <tbody> con el contenido de cada fila
+	-->
+	<table>
+		<caption>Plátanos y bananas</caption>
+		<thead>
+			<tr>
+				<th>Variedad</th>
+				<th>Color</th>
+				<th>Textura</th>
+				<th>Preparación</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Banano Cavendish</td>
+				<td>Amarillo </td>
+				<td>Suave</td>
+				<td>Fruta fresca y Postre</td>
+			</tr>
+			<tr>
+				<td>Banano orito</td>
+				<td>Amarillo claro</td>
+				<td>Cremosa y consistente</td>
+				<td>Fruta fresca, horno o parrilla</td>
+			</tr>
+			<tr>
+				<td>Banano rosado</td>
+				<td>Púrpura</td>
+				<td>Cremosa e intesamente dulce</td>
+				<td>Fruta fresca y Pudin</td>
+			</tr>
+			<tr>
+				<td>Plátano Barragante</td>
+				<td>Amarillo oscuro</td>
+				<td>Mantecoso</td>
+				<td>Frito, hervido, horno o parrilla</td>
+			</tr>
+			<tr>
+				<td>Plátano  Maqueño</td>
+				<td>Verde</td>
+				<td>Dura y pegajosa</td>
+				<td>Frito o al horno</td>
+			</tr>
+		</tbody>
+	</table>
+</h3>
+<h3>
+	<p>Los platos típicos de la Costa del Ecuador se caracterizan por presentar ingredientes autóctonos de la región, en especial tres elementos importantísimos: el <abbr title=”Platano-macho”>plátano verde</abbr>, el <abbr title=”cacahuete”>maní</abbr> y los mariscos.</p> 
+	<img id="verde" src="https://i.pinimg.com/originals/9c/e5/23/9ce52350f40ee8594d527dd79d107605.gif" width="300" height="300" alt="contenido verde" >
+
+	<!--con el elemento <details> hemos creado el contenido para que esté oculto y que pueda ser mostrado a pedido del usuario
+		si desea, este contenido es una lista numerada de todos los platos de los que se ofrecen con enlaces a los mismos utilizando 
+		el atributo id para que te lleve a él al hacer "click. 
+	-->
+	<details>
+		<summary>Contenido</summary>
+		<p>
+		<ol> 
+			<li>Platos con plátano verde
+				<ol>
+					<li><a href="#Tigrillo">Tigrillo</a></li>
+					<li><a href="#Bollo">Bollo</a></li>
+					<li><a href="#Corviche">Corviche</a></li>
+
+				</ol>
+			</li>
+			<li>Mariscos y pescados</li>
+				<ol>
+					<li><a href="#Encebollado">Encebollado</a></li>
+					<li><a href="#Ceviche">Ceviche</a></li>
+					<li><a href="#Cangrejo">Cangrejo criollos</a></li>
+				</ol>
+			</li>
+		</ol>	
+		</p>
+  </details>
+</h3>
+
+<h3>
+	<p>A continuación te presentamos las principales comidas típicas de la costa ecuatoriana con sus recetas en formato vídeo para que puedas hacerlas tu mismo y experimtenar la cultura y los sabores costeños.</p>
+</h3>	
+<h2>
+	Platos con plátano verde
+</h2>
+<!--creamos dos listas que nos dan como preterminado el estilo de un punto al lado (una lista platos hechos con verde y otra de mariscos y pescados), les hemos dado un titulo con <h2>;
+	hemos agrupado el contenido de cada plato con el elemento <div> y clase div para que se hagan los cambios a todos los elementos de la lista con css
+	y otros 2 div anidados en el primero que me determinan: el primero  una imagen con el tamaño que le hemos asignado en pixeles (todos parecidos)
+	para que quede bien estructurado y el segundo con el elemento <embed> introducimos el video de youtube , el cual nos ha dado su codigo <iframe> para poder visualizarlo.	
+-->
+<ul>
+	<h3><li id="Tigrillo">
+			<h2>Tigrillo</h2> 
+				<p>A la masa majada de plátano verde cocido se le añade huevo y leche para crear una masa más cremosa y a esta mezcla luego se le agrega queso, chicharrón o ambos (mixto).</p>
+			<div class="div">
+				<div>
+					<a href="#"> <img src="https://beachlifeecuador.com/wp-content/uploads/2019/07/tigrillo-de-verde.jpg" width="550px" height="350px" alt="Plato de verde majado"></a>
+				</div>	
+				<div>
+					<p>
+						<embed>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/TAZllBiDLEo?si=AelwYNU8mjaCQZxH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</embed>
+					</p>
+				</div>
+			</div>
+	
+	</h3></li>
+	<h3><li id="Bollo"> 
+			 <h2>Bollo</h2> 
+				<p>El bollo está hecho a base de plátano verde, maní molido y un refrito de pescado. Pero a diferencia de otras recetas, a esta preparación se lo envuelve en una hoja de plátano y se lo cocina al vapor. De ahí su sabor característico.</p>
+			<div class="div">
+				<div>
+					<a href="#"> <img src="https://beachlifeecuador.com/wp-content/uploads/2019/07/bollo-de-pescado.jpg" width="550px" height="350px" alt="Plato de verde envuelto"></a>
+				</div>
+				<div>
+					<p>
+						<embed>
+							<iframe width="560" height="335" src="https://www.youtube.com/embed/0eyjo-igI54?si=5CRS8aUI9XgcauLN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+						</embed>
+					</p>
+				</div>
+			</div>
+	</h3></li>	
+	<h3><li id="Corviche"> 
+			 <h2>Corviche</h2>  
+				<p>El corviche es un plato montuvio manabita (montuvio es el campesino de la costa) hecho a base de plátano verde, maní y un refrito de pescado. Generalmente te lo sirven frito para tener una cubierta externa crujiente y un interior bien suave</p>
+				<div class="div">
+					<div> 
+						<a href="#"> <img src="https://www.elcomercio.com/wp-content/uploads/2022/05/El-Comercio_21052022_PAG017_BLO06_photo05-700x697.jpg" width="550px" height="400px" alt="Plato de verde ovalado frito"></a>
+					</div>
+					<div>
+						<p>
+							<embed>
+								<iframe width="560" height="355" src="https://www.youtube.com/embed/7xjisb_eRh8?si=5v1EHghUhZTcrHvS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+							</embed>
+						</p>
+						
+					</div>
+				</div>
+	</h3></li>	
+</ul>
+<h2>
+	Mariscos y Pescados
+</h2>
+<ul>
+		<h3><li id="Encebollado"> 
+			<h2>Encebollado</h2> 
+				<p>Consiste en un caldo de pescado (albacora) con yuca, cebolla, pimiento, limón, tomate y hierbitas.</p>
+			<div class="div">
+				<a href="#"> <img src="https://beachlifeecuador.com/wp-content/uploads/2019/05/encebollado-ecuador.jpg" width="550px" alt="Sopa de pescado"></a>
+				<p>
+					<embed><iframe width="560" height="315" src="https://www.youtube.com/embed/AhJpRnQqcVs?si=bL3KTCgncepfoitE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</embed>
+				</p>
+			</div>	
+		</h3></li>
+		<h3><li id="Ceviche"> 
+			 <h2>Ceviche</h2> 
+				<p>Puedes encontrar ceviches con diferentes ingredientes: de pescado, camarón, concha, pulpo, mixto y de Chancalagua en las Islas Galápagos. En este plato se marinan los mariscos en una mezcla de jugo de limón y naranja, agregándole cilantro, pimiento, tomate, cebolla colorada y ají.</p>
+			<div class="div">
+				<div>
+				<a href="#"> <img src="https://beachlifeecuador.com/wp-content/uploads/2019/06/ceviche-ecuatoriano.jpg" width="550px " height="350px" alt="Mariscos encurtidos en limon"></a>
+				</div>
+				<div>
+				<p>
+					<embed>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/s8Fmezppr8g?si=CoOoyA4o-b_3uhqx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					 </embed>
+					</p>
+				</div>	
+			</div>
+		</h3></li>	
+		<h3><li id="Cangrejo"> 
+			 <h2>Cangrejo Criollo</h2>
+			 <p>Se los prepara con cerveza, cebolla, apio, cilantro, ají, hierbabuena, maduro, albahaca y cangrejos rojos. Y se los sirve acompañado de un ensalada de cebolla, tomate y cilantro, con arroz blanco.</p>
+			<div class="div">	
+				<div>
+					<a href="#"> <img src="https://beachlifeecuador.com/wp-content/uploads/2019/07/cangrejos-criollos.jpg" width="550px" height="350px"  alt="Cangrejos rojos"></a>
+				</div>	
+				<div>
+					<p>	
+						<embed>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/g5-BHrdM6OQ?si=BjaqUhsMK_YfmKhn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					 </embed>
+					</p>
+				</div>
+			</div>	
+		</h3></li>
+</ul>
+<footer>
+	&copy; Pagina creada por Karla Basurto Cañarte 2023
+</footer>
+</body>
+</html>
